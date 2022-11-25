@@ -1,4 +1,5 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
+import { useSearch } from '../../hooks/useSearch';
 import DrinkCard from './DrinkCard'
 
 
@@ -12,21 +13,24 @@ interface IDrinks{
   drinks:any[];
 }
 
-interface IDrinkProps {
-  drinksData: IDrinks;
-}
 
-const DrinkList = (props: IDrinkProps) =>{
-  const {drinksData} = props
-  const {drinks,idDrink, strDrink, strDrinkThumb, strIngredient1, strIngredient2, strIngredient3} = drinksData
 
+const DrinkList = () =>{
+  const {data, isLoading} = useSearch()
+  const [drinksData, setDrinksData] = useState<IDrinks[]>([]);
+
+  if(data){
+   return setDrinksData(data)
+  } 
+  isLoading
+  
   return (
     <>
         <div className="flex justify-center item-center mt-6">
       <div className="m:container grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
         {
         
-          drinksData.drinks ? 
+          drinksData ? 
         
         drinksData.drinks.map(drink => (
             <DrinkCard 

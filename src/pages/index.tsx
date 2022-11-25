@@ -10,29 +10,7 @@ import InputField from "../components/drinks/InputField";
 
 
 const Home: NextPage = () => {
-  const [drinks, setDrinks] = useState<any[]>([]);
-  const [userInput,  setUserInput] = useState<string>('negroni')
-  
- 
-    const { isLoading, error, data } = useQuery('cocktailData', () =>
-     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${userInput}`).then(res =>
-      res.json()
-    )
-  )
-
-    if (isLoading) return 'Loading...'
-
-    if (error) return 'An error has occurred: ' + error.message
-    if(data && data.data) setDrinks(data.data)
-
-
- 
-
-
-
-      
-
-  return (
+ return (
     <>
       <Head>
         <title>Drinker</title>
@@ -44,7 +22,7 @@ const Home: NextPage = () => {
       
         {/* <InputField/> */}
       
-        <DrinkList drinksData={drinks} />
+        <DrinkList />
      
         
     </>

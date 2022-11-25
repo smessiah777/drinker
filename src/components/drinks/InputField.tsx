@@ -2,7 +2,13 @@ import React from 'react'
 
 const InputField = () => {
   return (
-    <div>InputField</div>
+    <>
+      <form action="">
+        <div>
+        <input type="text" />
+        </div>
+      </form>
+    </>
   )
 }
 
