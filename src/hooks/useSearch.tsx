@@ -10,6 +10,8 @@ export const useSearch = () => {
     const fetchDrinks = async(userInput:string) => {
         const drinkFetch = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${userInput}`);
         const res = drinkFetch.json();
+        console.log(`useSearch fetch data ${res}`);
+        
         return res 
                 
      }
@@ -18,7 +20,7 @@ export const useSearch = () => {
             
     const debouncedFilter = useDebounce(userInput, 500);
     const { data, isLoading } = useQuery(
-        ['products', debouncedFilter], 
+        ['drinks', debouncedFilter], 
         () => fetchDrinks(debouncedFilter),
         { enabled: Boolean(debouncedFilter) }
     )
