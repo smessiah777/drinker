@@ -3,30 +3,36 @@ import { useQuery } from 'react-query';
 import useDebounce from './useDebounce';
 
 export const useSearch = () => {
-
     
-    const [userInput,  setUserInput] = useState<string>('negroni')
     
-    const fetchDrinks = async(userInput:string) => {
-        const drinkFetch = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${userInput}`);
-        const res = drinkFetch.json();
-        console.log(`useSearch fetch data ${res}`);
+    const [userInput,  setUserInput] = useState<string>('');
+    
+    const fetchDrinks = async(input: string) => {
         
-        return res 
+        const drinkFetch = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${input}`);
+        const res = drinkFetch.json();
+        
+        
+        return res
                 
      }
+
      
 
             
     const debouncedFilter = useDebounce(userInput, 500);
-    const { data, isLoading } = useQuery(
+    const { data, status, error } = useQuery(
         ['drinks', debouncedFilter], 
-        () => fetchDrinks(debouncedFilter),
+        async () => {
+        const data = await fetchDrinks(debouncedFilter);
+       
+        return data  
+    },
         { enabled: Boolean(debouncedFilter) }
     )
       
 
-    return {data, isLoading, setUserInput}
+    return {data, status, error, userInput, setUserInput}
 }
 
 

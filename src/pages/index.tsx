@@ -1,35 +1,39 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { QueryClient, QueryClientProvider} from 'react-query'
-import DrinkSearch from "../components/drinks/InputField";
+import { ReactQueryDevtools } from 'react-query/devtools'
+import Hero from '../components/landing/Hero'
 import DrinkList from '../components/drinks/DrinkList'
-import InputField from "../components/drinks/InputField";
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false,
-    },
-  },
-})
+
+
 
 const Home: NextPage = () => {
  return (
     <>
+     
+     
       <Head>
         <title>Drinker</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unica+One&display=swap" rel="stylesheet"></link>
       </Head>
+      <ReactQueryDevtools initialIsOpen={false}/>
 
 
-      <QueryClientProvider client={queryClient}>
+      <Hero/>
 
-        {/* <InputField/> */}
-        <DrinkList />
+        <div id="search" className="flex flex-col items-center pt-5">
 
-      </QueryClientProvider>
+          
+
+            
+            <DrinkList />
+            
+        
+
+        </div>
       
      
         

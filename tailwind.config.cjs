@@ -20,6 +20,17 @@ module.exports = {
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
     },
+    extend: {
+      fontFamily: {
+        unicaOne: "'Unica One', cursive;",
+        bebas: "'Bebas Neue', cursive;",
+        montserrat: "'Montserrat', sans-serif;",
+      },
+      backgroundImage: {
+        "hero-bg": "url('/hero-bg.png')",
+        "drinks-bg": "url('/search-section-bg.png')",
+      },
+    },
   },
   plugins: [require("daisyui")],
 };
