@@ -51,7 +51,7 @@ return (
               ingredient1={drink.strIngredient1} 
               ingredient2={drink.strIngredient2} 
               ingredient3={drink.strIngredient3}/>
-          )) : userInput == '' ? <h1>Search drink</h1> : <h1> try again</h1>
+          )) : userInput == '' ? "" : <h1> try again</h1>
 
         
       }

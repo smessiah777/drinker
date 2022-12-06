@@ -1,4 +1,4 @@
-import React from 'react'
+import Link from 'next/link'
 
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
     ingredient3: string;
 }
 
-const DrinkCard = ({cocktailName, img, ingredient1, ingredient2, ingredient3}: Props) => {
+const DrinkCard = ({id, cocktailName, img, ingredient1, ingredient2, ingredient3}: Props) => {
   return (
     <>
     
@@ -26,7 +26,9 @@ const DrinkCard = ({cocktailName, img, ingredient1, ingredient2, ingredient3}: P
                         
                 
                     <div className="card-actions justify-center">
-                    <button className="btn btn-primary">See More</button>
+                        <Link href={`drink/${id}`}>
+                            <button className="btn btn-primary">See More</button>
+                        </Link>  
                     </div>
                 </div>
             </div> 
