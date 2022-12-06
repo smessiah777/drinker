@@ -20,7 +20,7 @@ interface IDrink{
 
 
 const DrinkList = () =>{
-    const {status, data, error, userInput, setUserInput} = useSearch();
+    const {status, memoData, error, userInput, setUserInput} = useSearch();
     
     if (status === 'loading') {
         return <span>Loading...</span>
@@ -41,8 +41,8 @@ return (
       <div className="m:container grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
        
         
-        { data?.drinks !== null && status === 'success' ?
-            data?.drinks.map((drink: IDrink) => (
+        { memoData?.drinks !== null && status === 'success' ?
+            memoData?.drinks.map((drink: IDrink) => (
               <DrinkCard 
               key={drink.idDrink} 
               id={drink.idDrink} 
