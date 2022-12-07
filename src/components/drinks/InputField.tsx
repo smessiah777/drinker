@@ -1,4 +1,4 @@
-import React, {use, useEffect} from 'react'
+import Image from 'next/image'
 
 
 interface Props {
@@ -17,19 +17,23 @@ const InputField = ({userInputProp, setUserInputProp} : Props) => {
 return (
     <>
     
-    
+          <div className="bg-white border-solid border-2 border-teal-600 rounded-2xl w-full max-w-[37rem] flex px-3">
+                <Image 
+                    src="/search-icon.svg"
+                    alt="Search"
+                    width={24}
+                    height={24}
+                    className="justify-start"
+                />
+                <input 
+                type="text" 
+                value={userInputProp}
+                onChange={e => {searchDrinks(e.target.value)}}
+                className="bg-white focus:outline-none text-black ml-4 w-11/12"              
+              />
+          </div>
         
-        <input 
-          type="text" 
-          value={userInputProp}
-          onChange={e => {
-            searchDrinks(e.target.value)
-
-          }
-            
-          }
-          className="border-solid border-2 border-black"
-        />
+       
         
      
     </>

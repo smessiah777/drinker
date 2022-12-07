@@ -1,6 +1,5 @@
 import {useRouter} from 'next/router'
 import useSearchId from '../../hooks/useSearchId'
-import { useQuery, QueryCache } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools'
 
 

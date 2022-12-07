@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 
+
 interface Props {
     id: string;
     cocktailName: string;
@@ -15,19 +16,23 @@ const DrinkCard = ({id, cocktailName, img, ingredient1, ingredient2, ingredient3
     <>
     
     
-        <div className="card lg:card-side bg-base-100 shadow-xl xs:max-w-[13rem] md:max-w-xs  lg:max-h-48">
-            <figure ><img className=""  src={img} alt={cocktailName}/></figure>
-                <div className="card-body">
-                    <h2 className="card-title xs:justify-center xs:text-center">{cocktailName}</h2>
+        <div className="card lg:card-side bg-teal-600 shadow-xl xs:max-w-[13rem] md:max-w-lg  lg:max-h-48">
+            <figure ><img className="h-full"  src={img} alt={cocktailName}/></figure>
+                <div className="flex flex-col flex-1 justify-center items-center p-8">
+                    <h2 className="card-title text-white xs:justify-center xs:text-center pb-2">{cocktailName}</h2>
                 
-                        <p className="xs:text-center lg:text-left">{ingredient1}</p>
+            
                         
                     
                         
                 
-                    <div className="card-actions justify-center">
+                    <div className="card-actions justify-center content-end">
                         <Link href={`drink/${id}`}>
-                            <button className="btn btn-primary">See More</button>
+                            <button 
+                                className="btn btn-primary text-sm bg-black border-black
+                                hover:bg-white hover:border-white hover:text-teal-600">
+                                    More
+                            </button>
                         </Link>  
                     </div>
                 </div>

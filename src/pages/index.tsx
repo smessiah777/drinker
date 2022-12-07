@@ -3,7 +3,8 @@ import Head from "next/head";
 import Link from "next/link";
 import { ReactQueryDevtools } from 'react-query/devtools'
 import Hero from '../components/landing/Hero'
-import DrinkList from '../components/drinks/DrinkList'
+import Search from '../components/landing/Search'
+
 
 
 
@@ -23,23 +24,15 @@ const Home: NextPage = () => {
 
 
       <Hero/>
+      <Search/>
 
-        <div id="search" className="flex flex-col items-center pt-5">
-
-          
-
-            
-            <DrinkList />
-            
         
-
-        </div>
       
      
         
     </>
-  );
-};
+  )
+}
 
 export default Home;
 
