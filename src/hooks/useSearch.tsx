@@ -1,18 +1,9 @@
 import {useState, useMemo} from 'react';
 import { useQuery } from 'react-query';
 import useDebounce from './useDebounce';
+import { DrinksModel } from '../components/drinks/drinksModel';
 
 
-
-
-type Drinks = {
-    idDrink: string;
-    strDrink: string;
-    strDrinkThumb: string;
-    strIngredient1: string;
-    strIngredient2: string;
-    strIngredient3: string;
-}
 
 export const useSearch = () => {
     
@@ -33,7 +24,7 @@ export const useSearch = () => {
 
             
     const debouncedFilter = useDebounce(userInput, 500);
-    const { data, status, error } = useQuery<Drinks[]>(
+    const { data, status, error } = useQuery<DrinksModel[]>(
         ['drinks', debouncedFilter], 
         async () => {
         const data = await fetchDrinks(debouncedFilter);

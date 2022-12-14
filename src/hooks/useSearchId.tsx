@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-
+import { DrinksModel } from "../components/drinks/drinksModel";
 
 
 
@@ -12,7 +12,7 @@ import { useQuery } from "react-query";
         return res
     }
 
-    const {data, status, error} = useQuery(['drinkById', id], async() => await fetchDrinksById(id))
+    const {data, status, error} = useQuery<DrinksModel[]>(['drinkById', id], async() => await fetchDrinksById(id))
 
    
    

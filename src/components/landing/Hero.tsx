@@ -7,13 +7,16 @@ const Hero = () => {
     <>
     <section id="hero" className="bg-white bg-hero-bg bg-contain bg-no-repeat bg-right h-screen flex flex-col ">
     <div  className="flex justify-center pt-4 z-10">
-                  <Image 
+                <Link href="#search">
+                    <Image 
                       src="/cocktail-icon.svg"
                       alt="drinker"
                       width={55}
                       height={55}
-                    
+                      className="transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
                       />
+                </Link>
+                  
                 </div >
             
         <div className="flex justify-start items-center my-0 mx-auto w-[60rem] h-screen ">
@@ -25,7 +28,7 @@ const Hero = () => {
                     the party up 
                   </p>
                   <Link href="#search">
-                    <button className="btn bg-teal-600 border-teal-600 border-2 text-white font-montserrat font-normal mt-7">Find Cocktails</button>
+                    <button className="btn bg-teal-600 border-teal-600 border-2 text-white font-montserrat font-normal tracking-wide mt-7 hover:drop-shadow-lg transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">Find Cocktails</button>
                   </Link>
                 </div>
         </div>

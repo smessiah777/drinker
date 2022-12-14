@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 
 
+
 interface Props {
     id: string;
     cocktailName: string;
@@ -11,7 +12,7 @@ interface Props {
     ingredient3: string;
 }
 
-const DrinkCard = ({id, cocktailName, img, ingredient1, ingredient2, ingredient3}: Props) => {
+const DrinkCard = ({id, cocktailName, img}: Props) => {
   return (
     <>
     
@@ -21,11 +22,6 @@ const DrinkCard = ({id, cocktailName, img, ingredient1, ingredient2, ingredient3
                 <div className="flex flex-col flex-1 justify-center items-center p-8">
                     <h2 className="card-title text-white xs:justify-center xs:text-center pb-2">{cocktailName}</h2>
                 
-            
-                        
-                    
-                        
-                
                     <div className="card-actions justify-center content-end">
                         <Link href={`drink/${id}`}>
                             <button 
@@ -34,6 +30,7 @@ const DrinkCard = ({id, cocktailName, img, ingredient1, ingredient2, ingredient3
                                     More
                             </button>
                         </Link>  
+                
                     </div>
                 </div>
             </div> 

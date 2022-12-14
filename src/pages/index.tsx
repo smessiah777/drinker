@@ -26,10 +26,6 @@ const Home: NextPage = () => {
       <Hero/>
       <Search/>
 
-        
-      
-     
-        
     </>
   )
 }

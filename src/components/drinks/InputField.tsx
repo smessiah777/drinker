@@ -29,7 +29,7 @@ return (
                 type="text" 
                 value={userInputProp}
                 onChange={e => {searchDrinks(e.target.value)}}
-                className="bg-white focus:outline-none text-black ml-4 w-11/12"              
+                className="bg-white focus:outline-none text-black ml-4 w-11/12 py-1"              
               />
           </div>
         
