@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useSearch } from '../../hooks/useSearch';
-import {DrinksModel} from '../drinks/drinksModel'
+import {DrinksModel} from '../drinks/DrinksModel'
 import InputField from './InputField';
 import DrinkCard from './DrinkCard';
 

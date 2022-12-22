@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import { DrinksModel } from "../components/drinks/drinksModel";
+import { DrinksModel } from "../components/drinks/DrinksModel";
 
 
 
