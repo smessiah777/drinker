@@ -7,6 +7,7 @@ interface Props {
     id: string;
     cocktailName: string;
     img: string;
+    
 }
 
 const DrinkCard = ({id, cocktailName, img}: Props) => {

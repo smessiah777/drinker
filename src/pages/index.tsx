@@ -3,10 +3,6 @@ import Head from "next/head";
 import Hero from '../components/landing/Hero'
 import Search from '../components/landing/Search'
 
-
-
-
-
 const Home: NextPage = () => {
  return (
     <>
