@@ -1,6 +1,5 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import { ReactQueryDevtools } from 'react-query/devtools'
 import Hero from '../components/landing/Hero'
 import Search from '../components/landing/Search'
 

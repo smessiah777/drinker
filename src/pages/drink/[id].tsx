@@ -2,8 +2,7 @@ import {useRouter} from 'next/router'
 import Link from 'next/link'
 import useSearchId from '../../hooks/useSearchId'
 import { ReactQueryDevtools } from 'react-query/devtools'
-import {DrinksModel} from '../drink/DrinksModel'
-
+import {DrinksModel} from '../../components/drinks/DrinksModel'
 
 
 const Details = () => {
@@ -13,10 +12,7 @@ const Details = () => {
 
     const {data, status, error} = useSearchId(id);
     
-    if (status === 'error') {
-        return  console.log(`useSearchId error ${error.message}`);
-
-      } 
+    
 
     
     

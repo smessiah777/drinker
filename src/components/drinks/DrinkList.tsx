@@ -1,6 +1,4 @@
-import Image from 'next/image'
 import { useSearch } from '../../hooks/useSearch';
-import {DrinksModel} from '../drinks/DrinksModel'
 import InputField from './InputField';
 import DrinkCard from './DrinkCard';
 
@@ -22,7 +20,7 @@ return (
     <div className="flex justify-center item-center mt-6 m:container px-5 overflow-hidden" >
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8">
             {memoData?.drinks !== null || undefined && status === 'success' ?
-            memoData?.drinks.map((drink: DrinksModel) => (
+            memoData?.drinks.map((drink: any) => (
               
                 <DrinkCard 
                 key={drink.idDrink} 
