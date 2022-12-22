@@ -6,20 +6,11 @@ import {DrinksModel} from '../drink/DrinksModel'
 
 
 
- 
-
-
 const Details = () => {
     const { 
         query: { id }
     } = useRouter();
 
-  
-
-    
-
-  
-    
     const {data, status, error} = useSearchId(id);
     
     if (status === 'error') {
@@ -28,7 +19,7 @@ const Details = () => {
       } 
 
     
-
+    
     return (
         <>
         <ReactQueryDevtools initialIsOpen={false}/>
@@ -44,7 +35,7 @@ const Details = () => {
                                 </div>
                               </Link>
                                  
-                                <img src={drink.strDrinkThumb} alt={drink.strDrink} className="max-w-md my-0 mx-auto pt-4"/>
+                                <img src={drink.strDrinkThumb} alt={drink.strDrink} className="xs:w-64 md:w-96 max-w-md  my-0 mx-auto pt-4"/>
                                 
                                 <h1 className="text-3xl text-center uppercase py-5 font-montserrat text-lg tracking-wide font-medium">
                                 {drink.strDrink}
@@ -95,9 +86,7 @@ const Details = () => {
                                </div>
 
                                 <p className="mx-8 px-8 text-base">
-                                        
-                                        {drink.strInstructions}
-                    
+                                    {drink.strInstructions}
                                 </p>
                           </div>
                     ))  : []   }

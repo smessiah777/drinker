@@ -12,7 +12,7 @@ import Search from '../components/landing/Search'
 const Home: NextPage = () => {
  return (
     <>
-      <ReactQueryDevtools initialIsOpen={false}/>
+      {/* <ReactQueryDevtools initialIsOpen={false}/> */}
      
      
       <Head>

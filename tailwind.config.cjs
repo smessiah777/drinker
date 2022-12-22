@@ -28,6 +28,7 @@ module.exports = {
       },
       backgroundImage: {
         "hero-bg": "url('/hero-bg.png')",
+        "hero-mobile-bg": "url('/mobile-bg.jpg')",
         "drinks-bg": "url('/search-section-bg.png')",
       },
     },

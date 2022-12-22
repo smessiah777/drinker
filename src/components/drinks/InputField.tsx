@@ -17,7 +17,7 @@ const InputField = ({userInputProp, setUserInputProp} : Props) => {
 return (
     <>
     
-          <div className="bg-white border-solid border-2 border-teal-600 rounded-2xl w-full max-w-[37rem] flex px-3">
+          <div className="flex bg-white border-solid border-2 border-teal-600 rounded-2xl lg:w-full max-w-[37rem] md:w-full xs:w-64  px-3">
                 <Image 
                     src="/search-icon.svg"
                     alt="Search"
