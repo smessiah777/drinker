@@ -97,7 +97,7 @@ const DrinkProfile = (props: Props) => {
                                         <li>{props.strMeasure13}</li>
                                         <li>{props.strMeasure14}</li>
                                         <li>{props.strMeasure15}</li>
-                                      </ul>props.
+                                      </ul>
                                   </div>
                                </div>
 
